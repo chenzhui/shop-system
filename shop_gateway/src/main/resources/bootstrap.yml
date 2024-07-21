@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: shop-gateway
+  cloud:
+    nacos:
+      username: nacos
+      password: nacos
+      config:
+        server-addr: 127.0.0.1:8848
+        namespace: shop-dev
+        file-extension: yaml # 配置文件格式
+        shared-configs:
+          - data-id: redis-config-dev.yaml
+          - data-id: nacos-discovery-config-dev.yaml
+  profiles:
+    active: dev

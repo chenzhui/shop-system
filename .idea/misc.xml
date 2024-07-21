@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/Shop_Gatway/pom.xml" />
+        <option value="$PROJECT_DIR$/shop_gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/shop-uaa/pom.xml" />
+        <option value="$PROJECT_DIR$/shop-common/pom.xml" />
+        <option value="$PROJECT_DIR$/shop-product/pom.xml" />
+        <option value="$PROJECT_DIR$/shop-pay/pom.xml" />
+        <option value="$PROJECT_DIR$/shop-job/pom.xml" />
+        <option value="$PROJECT_DIR$/shop-intergral/pom.xml" />
+        <option value="$PROJECT_DIR$/shop-seckill/pom.xml" />
+        <option value="$PROJECT_DIR$/shop-socket/pom.xml" />
+        <option value="$PROJECT_DIR$/shop-indent/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="16" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

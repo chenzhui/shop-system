@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: shop-product
+  cloud:
+    nacos:
+      config:
+        namespace: shop-dev
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+        shared-configs:
+          - data-id: redis-config-dev.yaml
+          - data-id: rocketmq-config-dev.yaml
+          - data-id: nacos-discovery-config-dev.yaml
+  profiles:
+    active: dev
+logging:
+  level:
+    com.example: debug

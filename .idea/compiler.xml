@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <option name="BUILD_PROCESS_HEAP_SIZE" value="512" />
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="shop_gateway" />
+        <module name="shop-seckill" />
+        <module name="shop-uaa" />
+        <module name="shop-indent" />
+        <module name="shop-pay" />
+        <module name="shop-socket" />
+        <module name="shop-product" />
+        <module name="shop-common" />
+        <module name="shop-intergral" />
+        <module name="shop-job" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

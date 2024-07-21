@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.mapper.UserMapper">
+    
+    <insert id="insertLoginLog" useGeneratedKeys="true" keyProperty="id">
+        insert into usr_login_logs(phone,login_ip,login_time,state) values(#{phone},#{loginIp},#{loginTime},#{state})
+    </insert>
+    <select id="selectUserByPhone" resultType="com.example.common.entity.User" >
+        select * from usr where phone = #{phone}
+    </select>
+<!--    <select id="selectUserInfoByPhone" resultType="cn.wolfcode.common.domain.UserInfo" >-->
+<!--        select * from t_user_info where phone = #{phone}-->
+<!--    </select>-->
+    <insert id="insertUser">
+        insert into usr(phone,password,salt) values (#{phone},#{password},#{salt})
+    </insert>
+    
+    <insert id="insertUserInfo">
+        insert into usr_info(phone,nickName,head,register_ip,register_time,birthDay,info) values (#{phone},#{nickName},#{head},#{registerIp},now(),#{birthDay},#{info})
+    </insert>
+
+    <select id="selectUserInfoByPhone" resultType="com.example.common.entity.UserInfo">
+         select * from usr_info where phone =#{phone}
+    </select>
+
+    <update id="updateUserInfoByPhone">
+        update usr_info
+        <set>
+            <if test="nickName!= null">
+                nickName=#{nickName}
+            </if>
+        </set>
+        where phone=#{phone}
+    </update>
+
+</mapper>

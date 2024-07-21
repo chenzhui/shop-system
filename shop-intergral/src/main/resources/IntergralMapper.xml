@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.IntergralMapper">
+
+    <update id="descIntergral">
+        update usable_intergral
+        set amount=amount-#{value},gmt_modified=now()
+        where user_id=#{userId}
+    </update>
+
+    <update id="incrIntergral">
+        update usable_intergral
+        set amount=amount+#{value},gmt_modified=now()
+        where user_id=#{userId} and amount >= #{value}
+    </update>
+
+
+    <insert id="insertLog">
+        insert into intergral_log
+        (trade_no,order_no,type,amount,gmt_time,info)
+        values (#{tradeNo},#{orderNo},#{type},#{amount},#{gmtTime},#{info})
+    </insert>
+
+</mapper>
